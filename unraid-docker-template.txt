@@ -1,0 +1,39 @@
+# TEAPS v5 - Unraid Docker Configuration Template
+# Copy this to your Unraid "Docker Manager" -> "Add Container" -> "Advanced View"
+
+# ==================== CONTAINER INFO ====================
+Container Name: teaps-v5
+Repository: johnnyhsu56788/teaps-v5 (or use local build)
+Tag: latest
+
+# ==================== NETWORK ====================
+Port Mapping:
+  - Host Port: 8000 -> Container Port: 8000 (Web API)
+  - Host Port: 8765 -> Container Port: 8765 (Optional, for debugging)
+
+# ==================== VOLUMES ====================
+Path Mappings:
+  /mnt/user/appdata/teaps-v5/config:/app/config
+  /mnt/user/appdata/teaps-v5/logs:/app/logs
+  /mnt/user/appdata/teaps-v5/.env:/app/.env (Read-Only)
+
+# Optional: Database volume if using external MySQL
+  /mnt/user/appdata/mysql:/var/lib/mysql (if running MySQL separately)
+
+# ==================== ENVIRONMENT VARIABLES ====================
+TEAPS_DB_HOST: mysql (or your database host IP)
+TEAPS_DB_PORT: 3306
+TEAPS_DB_NAME: teaps_v5
+TEAPS_DB_USER: teaps_user
+TEAPS_DB_PASSWORD: [YOUR_SECURE_PASSWORD]
+TEAPS_TELEGRAM_BOT_TOKEN: [YOUR_BOT_TOKEN_FROM_BOTFATHER]
+QR_SECRET_KEY: auto_generated (optional)
+TEAPS_WEB_HOST: 0.0.0.0
+TEAPS_WEB_PORT: 8000
+
+# ==================== AUTO_RESTART ====================
+Restart Policy: Always
+
+# ==================== CPU/MEMORY LIMITS ====================
+CPU Limit: 2.0 cores (recommended)
+Memory Limit: 1GB RAM (minimum), 2GB recommended

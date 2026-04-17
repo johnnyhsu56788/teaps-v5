@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs
+logs/
+*.log
+
+# Environment files (don't commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.db
+*.sqlite3
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (optional, if you want to exclude)
+# docs/_build/
