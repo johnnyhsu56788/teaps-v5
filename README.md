@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TEAPS v5 - Attendance & Payroll System
 
 雙語 Telegram 基於的出勤與薪資管理系統。
@@ -220,3 +221,7 @@ This project is proprietary software. All rights reserved.
 **版本**: 5.0.0  
 **開發中**: TEAPS Team  
 **最後更新**: 2026-04-17
+=======
+# teaps-v5
+Bilingual Telegram-based attendance &amp; payroll system with manager approval workflow
+>>>>>>> origin/main
